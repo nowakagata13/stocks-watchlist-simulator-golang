@@ -1,0 +1,32 @@
+[
+  {
+    "symbol": "AAPL",
+    "current_price": 210.14,
+    "change_percent": 0.4109327217125312
+  },
+  {
+    "symbol": "MSFT",
+    "current_price": 391.16,
+    "change_percent": -0.17608778869465297
+  },
+  {
+    "symbol": "AMZN",
+    "current_price": 187.7,
+    "change_percent": -0.6825757976612626
+  },
+  {
+    "symbol": "NVDA",
+    "current_price": 108.73,
+    "change_percent": -2.053869020808937
+  },
+  {
+    "symbol": "PLTR",
+    "current_price": 114.65,
+    "change_percent": 1.6580954069870584
+  },
+  {
+    "symbol": "INTC",
+    "current_price": 20.51,
+    "change_percent": 2.294264339152124
+  }
+]
