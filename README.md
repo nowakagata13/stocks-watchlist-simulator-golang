@@ -1,16 +1,16 @@
-# 📈 Stock Watchlist CLI (Go)
+# Stock Watchlist Tracker (Go)
 
-A simple command-line tool to manage and monitor your favorite stock symbols, built in **Golang**.
+A simple command-line tool to manage and monitor stock prices, built in **Golang**.
 
-- 🛠 Add, remove, and list stocks.
-- 🔄 Automatic background refreshing every minute.
-- 📆 Watchlist persists between sessions (saved to `watchlist.json`).
-- 🌎 Stock data fetched live using **Finnhub API**.
-- 📚 Good project for practicing Go file operations, APIs, concurrency (goroutines), and modular code design.
+-  Add, remove, and list stocks.
+-  Automatic background refreshing every minute.
+-  Watchlist persists between sessions (saved to `watchlist.json`).
+-  Stock data fetched live using **Finnhub API**.
+-  Good project for practicing Go file operations, APIs, concurrency (goroutines), and modular code design.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Add a stock symbol (e.g., `AAPL`, `TSLA`) to your personal watchlist
 - Remove a stock symbol
@@ -21,7 +21,7 @@ A simple command-line tool to manage and monitor your favorite stock symbols, bu
 
 ---
 
-## 💻 Installation
+## Installation
 
 1. **Clone the repo:**
 
@@ -40,15 +40,7 @@ go mod tidy
 
 You need a free API key from [Finnhub.io](https://finnhub.io/).
 
-Create a `.env` file in your project root:
-
-```bash
-FINNHUB_API_KEY=your_api_key_here
-```
-
-(Or set the environment variable manually.)
-
----
+Create a `.env` file in your project root and add the key there
 
 ## 📦 How to Run
 
@@ -66,11 +58,11 @@ Choose an option:
 4. Quit
 ```
 
-✅ Stock prices are refreshed automatically in the background every 60 seconds.
+Stock prices are refreshed automatically in the background every 60 seconds.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -79,14 +71,12 @@ Choose an option:
 ├── main.go             # Program entry point (menu & user input)
 ├── stock.go            # Fetch stock info from API
 ├── watchlist.go        # Manage watchlist (load, save, add, remove)
-├── refresh.go          # Background refresher
-├── utils.go            # (Optional helpers if needed)
 ├── watchlist.json      # Your saved watchlist
 ```
 
 ---
 
-## 🛠 Built With
+## Built With
 
 - [Go](https://golang.org/) — Programming language
 - [Finnhub API](https://finnhub.io/) — Stock price API
@@ -95,38 +85,7 @@ Choose an option:
 
 ---
 
-## 📜 Future Improvements (Ideas)
-
-- Add alerts (e.g., notify if stock moves +5% or -5%)
-- Support cryptocurrencies (e.g., Bitcoin)
-- Historical price charts (ASCII art!)
-- Command-line arguments support
-- Export watchlist to CSV
-- Dockerize for easy running anywhere
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License — feel free to use and modify!
-
----
-
-# 🙌 Contributing
-
-Pull requests are welcome.  
-For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-# 📬 Contact
-
-**Your Name**  
-[Your GitHub Profile](https://github.com/your-username)
-
----
-
-# ✨ Preview
+# Preview
 
 Here’s how the CLI looks:
 
