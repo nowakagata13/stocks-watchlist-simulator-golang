@@ -1,50 +1,38 @@
-# Stock Watchlist Tracker (Go)
+# Stocks Watchlist and Simulator (Go)
 
-A simple command-line tool to manage and monitor stock prices, built in **Golang**.
+A simple command-line tool to montior stock prices and simulate buying and selling them, built in **Golang**.
+
+The project uses free API endpoint from Finnhub that allows fetching live prices of stocks.
 
 -  Add, remove, and list stocks.
+-  Buy, sell and monitor your portfolio
 -  Automatic background refreshing every minute.
--  Watchlist persists between sessions (saved to `watchlist.json`).
 -  Stock data fetched live using **Finnhub API**.
 -  Good project for practicing Go file operations, APIs, concurrency (goroutines), and modular code design.
 
 ---
 
-## Features
-
-- Add a stock symbol (e.g., `AAPL`, `TSLA`) to your personal watchlist
-- Remove a stock symbol
-- Display current prices and daily % change in a table
-- Automatically refresh stock data every 60 seconds
-- Store your watchlist locally (`watchlist.json`)
-- Clean modular code split across multiple files
-
----
-
 ## Installation
 
-1. **Clone the repo:**
+3. **Set up API key:**
 
-```bash
-git clone https://github.com/your-username/stock-watchlist-go.git
-cd stock-watchlist-go
-```
+To be able to access live prices of stock, you need a free API key from [Finnhub.io](https://finnhub.io/).
+
+Create a `.env` file in your project root and add the key there as FINNHUB_API_KEY.
+
 
 2. **Install dependencies:**
+
+Clone the repo locally, open the directory and run
 
 ```bash
 go mod tidy
 ```
 
-3. **Set up API key:**
-
-You need a free API key from [Finnhub.io](https://finnhub.io/).
-
-Create a `.env` file in your project root and add the key there
-
-## 📦 How to Run
+##  **Run**
 
 ```bash
+go build .
 go run main.go
 ```
 
@@ -55,7 +43,12 @@ Choose an option:
 1. List Watchlist
 2. Add Stock
 3. Remove Stock
-4. Quit
+4. Buy Stock
+5. Sell Stock
+6. View Portfolio
+7. View Transactions
+8. Quit
+> 
 ```
 
 Stock prices are refreshed automatically in the background every 60 seconds.
@@ -66,9 +59,13 @@ Stock prices are refreshed automatically in the background every 60 seconds.
 
 ```
 .
+├── .github/workflows
+    ├── go.yml          # yml file to run build workflow in Github Actions
 ├── .env                # API Key storage
 ├── go.mod              # Go modules
+├── go.sum
 ├── main.go             # Program entry point (menu & user input)
+├── portfolio.go        # Buy, sell and view your portfolio of stocks
 ├── stock.go            # Fetch stock info from API
 ├── watchlist.go        # Manage watchlist (load, save, add, remove)
 ├── watchlist.json      # Your saved watchlist
@@ -76,12 +73,11 @@ Stock prices are refreshed automatically in the background every 60 seconds.
 
 ---
 
-## Built With
+## Tech 
 
-- [Go](https://golang.org/) — Programming language
-- [Finnhub API](https://finnhub.io/) — Stock price API
-- [tablewriter](https://github.com/olekukonko/tablewriter) — ASCII table formatting
-- [godotenv](https://github.com/joho/godotenv) — .env file loader for Go
+- Golang— Programming language
+- SQLite - simple SQL database
+- Github Actions
 
 ---
 
