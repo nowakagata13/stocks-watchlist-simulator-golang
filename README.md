@@ -14,7 +14,7 @@ The project uses free API endpoint from Finnhub that allows fetching live prices
 
 ## Installation
 
-3. **Set up API key:**
+1. **Set up API key:**
 
 To be able to access live prices of stock, you need a free API key from [Finnhub.io](https://finnhub.io/).
 
@@ -29,7 +29,7 @@ Clone the repo locally, open the directory and run
 go mod tidy
 ```
 
-##  **Run**
+##  Run
 
 ```bash
 go build .
